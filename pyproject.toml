@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "hacklas-recon"
+version = "0.0.1"
+description = "Automatically recon new targets. Based on but not fork of AutoRecon"
+authors = ["Julien Bongars"]
+license = "MIT"
+packages = [
+	{ include = "hacklas_recon" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+platformdirs = "^4.3.6"
+colorama = "^0.4.5"
+impacket = "^0.10.0"
+psutil = "^5.9.4"
+requests = "^2.28.1"
+toml = "^0.10.2"
+Unidecode = "^1.3.1"
+
+[tool.poetry.group.dev.dependencies]
+# Add dev dependencies here if needed
+
+[tool.poetry.scripts]
+hacklas-recon = "hacklas_recon.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
